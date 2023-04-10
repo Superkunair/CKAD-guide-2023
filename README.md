@@ -57,21 +57,22 @@ I recommend you to **DON't use the script unless you have a supported CPU arch,a
 - Don't start the certification exam without taking the simulator, the exam actually comes with a free try of the simulator, you can check it ou here: [CKAD Simulator](https://killer.sh/faq)
   #
 - The course will recommend you to install podman instead of docker, if you already have docker runtime in your machine you don't really need to install podman
-  #
-- Adding a worker node:
+ 
+- Adding a worker node: Docker for desktop runs in a single node so the only option would be to install `kubeadmn` and create another worker node
+- **for k3s** `sudo k3s kubectl get node <node-name> -o jsonpath='{.spec.taints[0].value}'` replace the node-name with the name you want for the node, and finally paste the output and login to the worker node
+
   
 - For the local repository problem (the practice tells you to use http instead of https for practicity):
 
-####Docker desktop
+#### Docker desktop
  simply go to "**Preferences > DockerEngine**" in Docker-for-desktop and add
 
 ```json {
   "registry-mirrors": [
     "<your_registry_ip>"
   ]
-}
 ```
-###k3s
+### k3s and rancher
 `sudo vim /etc/rancher/k3s/registries.yaml` and
 add following:
 ```yaml
