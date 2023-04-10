@@ -4,10 +4,10 @@ Welcome to CKAD guide, the purpose of this content is to share and give some tri
 
 ## Index
 
-[1. How to start ?](#how-to-start)
-2. [Installing K8 for windows, linux or MAC](#installing-k8)
-3. Configurations
-4. Trips before hitting the certification exam
+- 1. [How to start ?](#how-to-start)
+- 2. [Installing K8 for windows, linux or MAC](#installing-k8)
+- 3. Configurations
+- 4. Trips before hitting the certification exam
 
 
 
